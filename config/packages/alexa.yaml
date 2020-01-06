@@ -1,0 +1,35 @@
+cloud:
+  alexa:
+    filter:
+      include_domains:
+        - automation
+        - group
+        - switch
+        - light
+        - media_player
+        - input_boolean
+      exclude_entities:
+      #  - automation.start_work
+        - automation.tasmota_power_states_on_ha_start_up
+        # IKEA groups better controlled by individual lights
+        - light.lounge_light_2
+        - light.lounge_lamp_2
+        - light.office
+        - light.bedroom
+        # IKEA individual lights better controlled by groups
+        - light.hf_light_1
+        - light.hf_light_2
+        - light.hf_light_3
+        - light.hf_light_4
+        - light.hk_light_1
+        - light.hk_light_2
+        - light.hk_light_3
+        - light.hk_light_4
+        - group.sonoff
+        - group.bedroom_lights
+        - group.lounge_lights
+        - group.office_lights
+        - group.hallway_lights    
+    #entity_config:
+    #  group.kitchen_lights:
+    #    display_categories: LIGHT

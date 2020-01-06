@@ -1,0 +1,15 @@
+#-------------------------------------------
+# QNAP monitoring
+#-------------------------------------------
+
+  - platform: qnap
+    host: 172.16.0.50
+    username: !secret qnap_user
+    password: !secret qnap_pass
+    timeout: 60
+    monitored_conditions:
+      - status
+      - cpu_usage
+      - memory_percent_used
+      - network_tx
+      - volume_percentage_used

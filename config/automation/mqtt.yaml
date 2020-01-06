@@ -1,0 +1,34 @@
+###################################
+##  Automations
+###################################
+
+- alias: Tasmota Power states on HA start-up
+  hide_entity: true
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+  - service: mqtt.publish
+    data:
+      topic: cmnd/SteveDesk/POWER1
+      payload: ''
+  - service: mqtt.publish
+    data:
+      topic: cmnd/SteveDesk/POWER2
+      payload: ''
+  - service: mqtt.publish
+    data:
+      topic: cmnd/SteveDesk/POWER3
+      payload: ''
+  - service: mqtt.publish
+    data:
+      topic: cmnd/SteveDesk/POWER4
+      payload: ''
+  - service: mqtt.publish
+    data:
+      topic: cmnd/KarinaDesk/POWER
+      payload: ''
+  - service: mqtt.publish
+    data:
+      topic: cmnd/QuadDesk/POWER
+      payload: ''

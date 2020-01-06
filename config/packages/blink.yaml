@@ -1,0 +1,13 @@
+blink:
+  username: !secret blink_username
+  password: !secret blink_password
+  scan_interval: 14400
+  binary_sensors:
+    monitored_conditions:
+      - motion_enabled
+      - motion_detected
+  sensors:
+    monitored_conditions:
+      - battery
+      - temperature
+      - wifi_strength

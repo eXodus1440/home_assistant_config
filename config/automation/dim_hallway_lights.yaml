@@ -1,0 +1,57 @@
+# Dim the hallway lights so they're not blinding at night
+- alias: Dim HF Lights
+  description: Dim the HF Lights for night use
+  trigger:
+  - at: '21:35:00'
+    platform: time
+  condition: []
+  action:
+    service: script.dim_ikea_light
+    data_template:
+      # Variables that are passed on to the script:
+      entity: group.hallway_lights
+      color_temp: 450
+      brightness_pct: 1
+
+- alias: Dim HK Lights
+  description: Dim the HK Lights for night use
+  trigger:
+  - at: '21:35:00'
+    platform: time
+  condition: []
+  action:
+    service: script.dim_ikea_light
+    data_template:
+      # Variables that are passed on to the script:
+      entity: light.hallway_kitchen
+      color_temp: 450
+      brightness_pct: 1
+
+# Reset the hallway lights for day usage
+- alias: Reset HF Lights
+  description: Reset the HF Lights for day use
+  trigger:
+  - at: '07:35:00'
+    platform: time
+  condition: []
+  action:
+    service: script.dim_ikea_light
+    data_template:
+      # Variables that are passed on to the script:
+      entity: light.hallway_frontdoor
+      color_temp: 250
+      brightness_pct: 100
+
+- alias: Reset HK Lights
+  description: Reset the HK Lights for day use
+  trigger:
+  - at: '07:35:00'
+    platform: time
+  condition: []
+  action:
+    service: script.dim_ikea_light
+    data_template:
+      # Variables that are passed on to the script:
+      entity: light.hallway_kitchen
+      color_temp: 250
+      brightness_pct: 100

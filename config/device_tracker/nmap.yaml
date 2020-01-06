@@ -1,0 +1,6 @@
+#- platform: nmap_tracker
+#  hosts: 172.16.0.0/24
+#  home_interval: 15
+#  track_new_devices: no
+#  #exclude:
+#  #  - 172.16.0.0

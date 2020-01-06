@@ -1,0 +1,87 @@
+homeassistant:
+  name: Home
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  elevation: !secret homeassistant_elevation
+  unit_system: metric
+  time_zone: Europe/London
+  customize: !include_dir_merge_named customize
+  #customize_domain:
+  #  automation:
+  #    initial_state: 'on'
+  #customize_glob:
+  #  automation.*watchdog*:
+  #    icon: mdi:timer
+  #  sensor.dark_sky_*:
+  #    homebridge_hidden: true
+  #  scene.month_*_colors:
+  #    hidden: true
+  #    homebridge_hidden: true
+  packages: !include_dir_named packages
+  auth_providers:
+   - type: homeassistant
+   - type: legacy_api_password
+     api_password: !secret http_password
+   - type: trusted_networks
+     trusted_networks:
+       - 172.16.0.0/24
+       - !secret external_ip
+
+default_config:
+
+system_health:
+
+map:
+
+logbook:
+
+history:
+
+config:
+
+http:
+  base_url: !secret http_base_url
+  server_port: !secret server_port
+  #ssl_certificate: !secret ssl_certificate
+  #ssl_key: !secret ssl_key
+  ip_ban_enabled: true
+  #use_x_forwarded_for: true
+  #trusted_proxies:
+  #  - 10.0.0.200
+  login_attempts_threshold: 3
+  cors_allowed_origins:
+    - https://google.com
+    - https://www.home-assistant.io
+
+frontend:
+
+#panel_custom:
+#  - name: floorplan
+#    sidebar_title: Alarm Panel
+#    sidebar_icon: mdi:security-home
+#    url_path: floorplan
+#    config:
+#      hide_app_toolbar:
+#      config: /local/custom_ui/floorplan/floorplan.yaml
+
+discovery:
+  #ignore:
+  #  - samsung_tv
+
+updater:
+  include_used_components: true
+
+sun:
+
+logger: !include logger.yaml
+recorder: !include recorder.yaml
+
+group: !include_dir_merge_named group
+device_tracker: !include_dir_merge_list device_tracker
+sensor: !include_dir_merge_list sensor
+automation: !include_dir_merge_list automation
+#scene: !include_dir_merge_list scene
+switch: !include_dir_merge_list switch
+script: !include_dir_merge_named script
+#input_boolean: !include_dir_merge_named input_boolean
+#shell_command: !include_dir_merge_named shell_command

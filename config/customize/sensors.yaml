@@ -1,0 +1,8 @@
+###################################
+##  Sensor Customisations
+###################################
+
+sensor.ha_uptime:
+  friendly_name: 'HA Uptime'
+  hidden: False
+  #homebridge_hidden: True

@@ -1,0 +1,8 @@
+###################################################
+## Various MQTT sensors
+###################################################
+
+  - platform: mqtt
+    name: "New Sonoff IP"
+    state_topic: 'stat/#'
+    value_template: "{{ value_json.IPAddress1.split(' ')[1].replace('(','').replace(')','') }}"

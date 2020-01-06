@@ -1,0 +1,6 @@
+ get_sonoff_ip:
+  alias: Get New Sonoff IP (sonoff)
+  sequence:
+  - data:
+      topic: cmnd/sonoff/ipaddress
+    service: mqtt.publish

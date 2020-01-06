@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  ha:
+    image: homeassistant/home-assistant
+    command: python3 -m homeassistant -c /config/ --script check_config --info all
+    environment: 
+      - TZ=Europe/London
+    volumes:
+      - ./config:/config
+    #ports:
+    #  - '8123:8123'

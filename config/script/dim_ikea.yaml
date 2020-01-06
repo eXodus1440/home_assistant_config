@@ -1,0 +1,28 @@
+# https://www.wouterbulten.nl/blog/tech/ikea-tradfri-temp-and-brightness-with-home-assistant/
+
+dim_ikea_light:
+  sequence:
+    # Check whether the light is off (optional)
+    #- condition: template
+    #  value_template: "{{ is_state(entity, 'off') }}"
+    #- delay: '00:00:01'
+    
+    # Set the brightness percentage of the light (1-100)
+    - service: light.turn_on
+      data_template:
+        entity_id: "{{ entity }}"
+        brightness_pct: "{{ brightness_pct }}"
+        #transition: 3
+    - delay: '00:00:01'
+    
+    # Set the color temperature (Focus: 250, Everyday: 370, Relax: 450)
+    - service: light.turn_on
+      data_template:
+        entity_id: "{{ entity }}"
+        color_temp: "{{ color_temp }}"
+    - delay: '00:00:01'
+
+    # Turn off the light
+    - service: light.turn_off
+      data_template:
+        entity_id: "{{ entity }}"

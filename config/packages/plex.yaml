@@ -1,0 +1,8 @@
+#-------------------------------------------
+# Plex Related Packages
+#-------------------------------------------
+
+plex:
+  host: 172.16.0.50
+  server: BauerNAS
+  token: !secret plex_token

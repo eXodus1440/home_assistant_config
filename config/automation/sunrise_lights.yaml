@@ -1,0 +1,63 @@
+# Transition the lights to imitate Sunrise
+- alias: Sunrise HF Lights
+  description: Transition the HF Lights to imitate Sunrise
+  trigger:
+  - at: '05:20:00'
+    platform: time
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: script.sunrise_ikea_light
+    data_template:
+      # Variables that are passed on to the script:
+      entity: light.hallway_frontdoor
+      color_temp: 250
+      transition_time: 900
+
+- alias: Sunrise HK Lights
+  description: Transition the HK Lights to imitate Sunrise
+  trigger:
+  - at: '05:20:00'
+    platform: time
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: script.sunrise_ikea_light
+    data_template:
+      # Variables that are passed on to the script:
+      entity: light.hallway_frontdoor
+      color_temp: 250
+      transition_time: 900
+
+- alias: Sunrise Bedroom Lights
+  description: Transition the Bedroom Lights to imitate Sunrise
+  trigger:
+  - at: '05:20:00'
+    platform: time
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: script.sunrise_ikea_light
+    data_template:
+      # Variables that are passed on to the script:
+      entity: light.bedroom
+      color_temp: 450
+      transition_time: 900

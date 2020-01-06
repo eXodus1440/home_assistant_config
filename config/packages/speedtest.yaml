@@ -1,0 +1,12 @@
+#-------------------------------------------
+# SpeedTest Related Packages
+#-------------------------------------------
+
+speedtestdotnet:
+  scan_interval:
+    #hours: 6
+    minutes: 5
+  monitored_conditions:
+    - download
+    - upload
+    - ping

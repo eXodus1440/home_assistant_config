@@ -1,0 +1,28 @@
+Bedroom lights:
+  control: hidden
+  entities:
+    - light.bedroom_light
+
+Lounge lights:
+  control: hidden
+  entities:
+    - light.lounge_light
+    - light.lounge_lamp
+
+Office lights:
+  control: hidden
+  entities:
+    - light.office_light
+    - light.bench_light
+
+Hallway lights:
+  control: hidden
+  entities:
+    - light.hf_light_1
+    - light.hf_light_2
+    - light.hf_light_3
+    - light.hf_light_4
+    - light.hk_light_1
+    - light.hk_light_2
+    - light.hk_light_3
+    - light.hk_light_4

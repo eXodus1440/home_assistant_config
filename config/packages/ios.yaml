@@ -1,0 +1,27 @@
+#-------------------------------------------
+# iOS Related Packages
+#-------------------------------------------
+mobile_app:
+
+ios:
+
+notify:
+  - platform: ios
+  - name: ios_family
+    platform: group
+    services:
+    #  - service: ios_steve_iphone
+    #  - service: ios_karina_iphone
+  - name: ios_parents
+    platform: group
+    services:
+    #  - service: ios_steve_iphone
+    #  - service: ios_karina_iphone
+
+group:
+  Phones:
+    entities:
+    #  - sensor.ios_steve_iphone_battery_level
+    #  - sensor.ios_steve_iphone_battery_state
+    #  - sensor.ios_karina_iphone_battery_level
+    #  - sensor.ios_karina_iphone_battery_state

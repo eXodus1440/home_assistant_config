@@ -1,0 +1,17 @@
+###################################################
+## * Special HASS related sensors - Thanks @torn8o
+###################################################
+
+- platform: version
+  name: HA Installed Version
+  scan_interval: 86400
+
+- platform: uptime
+  name: Time Online
+  unit_of_measurement: hours
+
+- platform: rest
+  scan_interval: 86400
+  resource: https://api.ipify.org/
+  name: External IP
+  value_template: '{{ value }}'

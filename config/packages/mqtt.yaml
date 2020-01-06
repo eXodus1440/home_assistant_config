@@ -1,0 +1,23 @@
+#-------------------------------------------
+# MQTT Related Packages
+#-------------------------------------------
+
+mqtt:
+  broker: 172.16.0.252
+  port: 1883
+  client_id: home-assistant-1
+  keepalive: 60
+  username: !secret MQTT_username
+  password: !secret MQTT_password
+  birth_message:
+    topic: "tele/hassio1/LWT"
+    payload: "Online"
+    qos: 1
+    retain: true
+  will_message:
+    topic: "tele/hassio1/LWT"
+    payload: "Offline"
+    qos: 1
+    retain: true
+  #discovery: true
+  #discovery_prefix: homeassistant

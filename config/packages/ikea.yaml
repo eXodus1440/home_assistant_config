@@ -1,0 +1,7 @@
+#-------------------------------------------
+# IKEA Tradfri Related Packages
+#-------------------------------------------
+
+tradfri:
+  host: 172.16.0.231
+  allow_tradfri_groups: true

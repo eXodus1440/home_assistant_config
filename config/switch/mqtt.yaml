@@ -1,0 +1,75 @@
+###################################
+##  MQTT Switches Section
+###################################
+
+  - platform: mqtt
+    name: "Karina's Desk"
+    state_topic: "stat/KarinaDesk/POWER"
+    command_topic: "cmnd/KarinaDesk/POWER"
+    availability_topic: "tele/KarinaDesk/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: true
+
+  - platform: mqtt
+    name: "Quad Desk"
+    state_topic: "stat/QuadDesk/POWER"
+    command_topic: "cmnd/QuadDesk/POWER"
+    availability_topic: "tele/QuadDesk/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Office Alexa"
+    state_topic: "stat/SteveDesk/POWER1"
+    command_topic: "cmnd/SteveDesk/POWER1"
+    availability_topic: "tele/SteveDesk/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "My Docking Station"
+    state_topic: "stat/SteveDesk/POWER2"
+    command_topic: "cmnd/SteveDesk/POWER2"
+    availability_topic: "tele/SteveDesk/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "My Monitors"
+    state_topic: "stat/SteveDesk/POWER3"
+    command_topic: "cmnd/SteveDesk/POWER3"
+    availability_topic: "tele/SteveDesk/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "My Mac"
+    state_topic: "stat/SteveDesk/POWER4"
+    command_topic: "cmnd/SteveDesk/POWER4"
+    availability_topic: "tele/SteveDesk/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
