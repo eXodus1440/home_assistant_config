@@ -1,5 +1,5 @@
 ###################################
-##  Automations
+##  Tasmota MQTT Automations
 ###################################
 
 - alias: Tasmota Power states on HA start-up

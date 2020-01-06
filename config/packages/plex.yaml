@@ -4,5 +4,5 @@
 
 plex:
   host: 172.16.0.50
-  server: BauerNAS
+  server: !secret plex_server
   token: !secret plex_token

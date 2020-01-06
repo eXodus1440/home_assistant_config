@@ -20,7 +20,7 @@ logs:
   homeassistant.components.http: warn
   homeassistant.components.media_player: info
   #homeassistant.components.sensor.pi_hole: critical
-  #homeassistant.components.sensor.rest: critical
+  homeassistant.components.sensor.rest: critical
   homeassistant.components.recorder: error
   homeassistant.components.sensor.darksky: warn
   #homeassistant.components.zwave: warn
@@ -28,8 +28,7 @@ logs:
   homeassistant.helpers.entity: critical
   homeassistant.exceptions: info
   #pubnub: critical
-  #py.warnings: error
+  py.warnings: error
   requests.packages.urllib3.connectionpool: critical
   urllib3.connectionpool: error
   root: warn
-  #skybellpy: warn
