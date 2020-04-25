@@ -3,7 +3,7 @@
 ###################################
 
 - alias: Tasmota Power states on HA start-up
-  hide_entity: true
+  #hide_entity: true
   trigger:
     platform: homeassistant
     event: start

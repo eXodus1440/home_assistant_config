@@ -1,0 +1,28 @@
+# 'Home Alone' the Lounge lights so it looks like someone's home
+- alias: Auto-On Lounge Lights
+  description: Automatically turn on the Lounge lights so it looks like someone's home
+  trigger:
+  - at: '17:35:00'
+    platform: time
+  condition: []
+  action:
+    service: script.home_alone_light_on
+    data_template:
+      # Variables that are passed on to the script:
+      #service: light.turn_on
+      entity: group.lounge_lights
+      color_temp: 370
+      brightness_pct: 10
+      transition_time: 5
+
+- alias: Auto-Off Lounge Lights
+  description: Automatically turn on the Lounge lights so it looks like someone's home
+  trigger:
+  - at: '22:35:00'
+    platform: time
+  condition: []
+  action:
+    service: script.home_alone_light_off
+    data_template:
+      # Variables that are passed on to the script:
+      entity: group.lounge_lights

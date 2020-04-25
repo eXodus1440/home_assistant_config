@@ -2,7 +2,7 @@ version: '3'
 
 services:
   ha:
-    image: homeassistant/home-assistant
+    image: homeassistant/home-assistant:latest
     command: python3 -m homeassistant -c /config/ --script check_config --info all
     environment: 
       - TZ=Europe/London

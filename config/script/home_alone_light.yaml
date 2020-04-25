@@ -1,0 +1,23 @@
+# https://www.wouterbulten.nl/blog/tech/ikea-tradfri-temp-and-brightness-with-home-assistant/
+
+home_alone_light_on:
+  sequence:
+    # Set the state of the light
+    - service: light.turn_on
+      data_template:
+        entity_id: "{{ entity }}"
+        brightness_pct: "{{ brightness_pct }}"
+        color_temp: "{{ color_temp }}"
+        transition: "{{ transition_time }}"
+    #- delay: '00:00:01'
+
+home_alone_light_off:
+  sequence:
+    # Set the state of the light
+    - service: light.turn_off
+      data_template:
+        entity_id: "{{ entity }}"
+        #brightness_pct: "{{ brightness_pct }}"
+        #color_temp: "{{ color_temp }}"
+        #transition: "{{ transition_time }}"
+    #- delay: '00:00:01'
